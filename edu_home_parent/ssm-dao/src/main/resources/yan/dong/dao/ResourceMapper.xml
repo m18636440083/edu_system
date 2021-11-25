@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="yan.dong.dao.ResourceMapper">
+    <select id="findAllResource" parameterType="yan.dong.domain.ResourceVO" resultType="yan.dong.domain.Resource">
+        select * from resource
+        <where>
+            <if test="name != null">
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="url != null">
+                and url = #{url}
+            </if>
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
+        </where>
+    </select>
+    
+<!--    查询所有资源分类-->
+    <select id="findAllResourceCategory" resultType="yan.dong.domain.ResourceCategory">
+        select * from resource_category
+    </select>
+</mapper>

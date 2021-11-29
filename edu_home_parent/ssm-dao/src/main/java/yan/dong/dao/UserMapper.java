@@ -61,8 +61,8 @@ public interface UserMapper {
         演示拉取操作
     */
     public List<Resource> findResourceByRoleId2(List<Integer> ids);
-}
-
+    
+    
     public void test11();
     public void test21();
     public void test31();
@@ -70,4 +70,5 @@ public interface UserMapper {
     public void test51();
     public void test61();
     public void test71();
-    public void test81();
+    public void test81();  
+}

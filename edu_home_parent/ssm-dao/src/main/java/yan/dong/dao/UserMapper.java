@@ -68,13 +68,4 @@ public interface UserMapper {
     public void test3();
     public void test4();
     public void test5();
-    public void test6();
-    public void test7();
-    public void test8();  
-    
-    public void testtest12();
-    public void testtest22();
-    public void testtest32();
-    public void testtest42();
-    public void testtest52();
 }
